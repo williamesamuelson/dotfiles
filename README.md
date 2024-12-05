@@ -24,6 +24,7 @@ The repository is organized as follows:
 │   ├── wezterm/            # WezTerm configuration
 │   │   └── wezterm.lua
 └── setup.sh                # Script to set up symlinks
+```
 
 ## Usage
 
@@ -31,6 +32,7 @@ The repository is organized as follows:
 
 ```bash
 git clone https://github.com/<your-username>/dotfiles.git ~/dotfiles
+```
 
 ### 2. Run the Setup Script
 The `setup.sh` script creates symlinks for configuration files in their expected locations.
@@ -38,6 +40,7 @@ The `setup.sh` script creates symlinks for configuration files in their expected
 ```bash
 cd ~/dotfiles
 ./setup.sh
+```
 
 ### 3. Verify the Setup
 Ensure the symlinks point to the correct files:
@@ -49,6 +52,7 @@ ls -l ~/.tmux.conf
 ls -l ~/.zshrc
 ls -l ~/.config/nvim
 ls -l ~/.config/wezterm
+```
 
 ### Adding New Configurations
 1. Place the new configuration file in `~/dotfiles/config/<tool>/`.
