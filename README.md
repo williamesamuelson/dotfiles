@@ -31,7 +31,7 @@ The repository is organized as follows:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/dotfiles.git ~/dotfiles
+git clone https://github.com/williamesamuelson/dotfiles.git ~/dotfiles
 ```
 
 ### 2. Run the Setup Script
