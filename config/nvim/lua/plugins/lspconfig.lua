@@ -7,6 +7,7 @@ return {
             "williamboman/mason-lspconfig.nvim",
             "hrsh7th/nvim-cmp",
             "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-path",
         },
         config = function()
             -- Set up mason
@@ -42,6 +43,7 @@ return {
             cmp.setup({
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
+                    { name = "path" },
                 }),
                 mapping = cmp.mapping.preset.insert({
                     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
