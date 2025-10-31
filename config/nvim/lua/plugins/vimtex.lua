@@ -7,5 +7,7 @@ return {
         vim.g.vimtex_compiler_latexmk = {
             out_dir = 'build',
         }
+        vim.g.vimtex_quickfix_autoclose_after_keystrokes = 1
+
     end
 }
