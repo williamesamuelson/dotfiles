@@ -19,11 +19,10 @@ return {
 
             -- Get enhanced capabilities
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            local lspconfig = require("lspconfig")
             local cmp = require("cmp")
 
             -- Setup LSPs manually
-            lspconfig.lua_ls.setup {
+            vim.lsp.config('lua_ls', {
                 capabilities = capabilities,
                 settings = {
                     Lua = {
@@ -32,11 +31,11 @@ return {
                         },
                     },
                 },
-            }
-            lspconfig.julials.setup({
+            })
+            vim.lsp.config('julials', {
                 capabilities = capabilities,
             })
-            lspconfig.pyright.setup({
+            vim.lsp.config('pyright', {
                 capabilities = capabilities,
             })
 
