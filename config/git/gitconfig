@@ -5,3 +5,5 @@
 	editor = vim
 [github]
 	user = williamesamuelson
+[include]
+    path = ~/.gitconfig.local
