@@ -14,7 +14,7 @@ return {
             -- Set up mason
             require("mason").setup()
             require("mason-lspconfig").setup {
-                ensure_installed = { "lua_ls", "julials", "pyright" }
+                ensure_installed = { "lua_ls", "pyright" }
             }
 
             -- Get enhanced capabilities
@@ -32,12 +32,14 @@ return {
                     },
                 },
             })
-            vim.lsp.config('julials', {
-                capabilities = capabilities,
-            })
+            vim.lsp.enable('lua_ls')
+
+            vim.lsp.enable('julials')
+
             vim.lsp.config('pyright', {
                 capabilities = capabilities,
             })
+            vim.lsp.enable('pyright')
 
             -- Setup nvim-cmp
             cmp.setup({
