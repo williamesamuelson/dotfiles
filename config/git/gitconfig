@@ -7,3 +7,6 @@
 	user = williamesamuelson
 [include]
     path = ~/.gitconfig.local
+[diff]
+	wordRegex = .
+	colorWords = true
