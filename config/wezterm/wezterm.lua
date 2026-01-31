@@ -13,6 +13,8 @@ end
 
 -- This is where you actually apply your config choices
 
+config.hide_tab_bar_if_only_one_tab = true
+
 -- For example, changing the color scheme:
 config.color_scheme = 'rose-pine'
 config.window_decorations = "RESIZE"
