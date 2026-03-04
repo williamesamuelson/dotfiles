@@ -14,14 +14,14 @@ return {
             -- Set up mason
             require("mason").setup()
             require("mason-lspconfig").setup {
-                ensure_installed = { "lua_ls", "pyright" }
+                ensure_installed = { "lua_ls", "pyright" , "tinymist" , "harper_ls"}
             }
 
             -- Get enhanced capabilities
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local cmp = require("cmp")
 
-            -- Setup LSPs manually
+            -- Set up LSPs manually
             vim.lsp.config('lua_ls', {
                 capabilities = capabilities,
                 settings = {
@@ -41,7 +41,11 @@ return {
             })
             vim.lsp.enable('pyright')
 
-            -- Setup nvim-cmp
+            vim.lsp.enable('tinymist')
+
+            vim.lsp.enable('harper-ls')
+
+            -- Set up nvim-cmp
             cmp.setup({
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
