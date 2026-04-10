@@ -43,7 +43,7 @@ return {
 
             vim.lsp.enable('tinymist')
 
-            vim.lsp.enable('harper-ls')
+            vim.lsp.enable('harper_ls')
 
             -- Set up nvim-cmp
             cmp.setup({
