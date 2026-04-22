@@ -34,7 +34,16 @@ return {
             })
             vim.lsp.enable('lua_ls')
 
-            vim.lsp.enable('julials')
+            -- vim.lsp.enable('julials')
+            vim.lsp.config("jetls", {
+                cmd = {
+                    "jetls",
+                    "serve",
+                },
+                filetypes = { "julia" },
+                root_markers = { "Project.toml" }
+            })
+            vim.lsp.enable("jetls")
 
             vim.lsp.config('pyright', {
                 capabilities = capabilities,

@@ -13,6 +13,8 @@ typeset -U path
 path=("$HOME/.juliaup/bin" $path)
 # <<< juliaup initialize <<<
 
+path=("$HOME/.julia/bin" $path)
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
