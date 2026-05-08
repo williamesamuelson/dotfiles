@@ -3,6 +3,9 @@
 	email = william.samuelson@gmail.com
 [core]
 	editor = vim
+    pager = diffr | less -R
+[interactive]
+    diffFilter = diffr
 [github]
 	user = williamesamuelson
 [include]
