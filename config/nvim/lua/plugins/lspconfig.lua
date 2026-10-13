@@ -14,16 +14,19 @@ return {
             -- Set up mason
             require("mason").setup()
             require("mason-lspconfig").setup {
-                ensure_installed = { "lua_ls", "pyright" , "tinymist" , "harper_ls"}
+                ensure_installed = { "lua_ls", "pyright" , "tinymist" , "harper_ls"},
+                -- Only enable the servers listed below, not everything mason has installed
+                automatic_enable = false,
             }
 
-            -- Get enhanced capabilities
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local cmp = require("cmp")
 
-            -- Set up LSPs manually
+            -- Enhanced capabilities for every server
+            vim.lsp.config('*', {
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            })
+
             vim.lsp.config('lua_ls', {
-                capabilities = capabilities,
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -32,9 +35,8 @@ return {
                     },
                 },
             })
-            vim.lsp.enable('lua_ls')
 
-            -- vim.lsp.enable('julials')
+            -- jetls is installed from Julia, not mason
             vim.lsp.config("jetls", {
                 cmd = {
                     "jetls",
@@ -43,16 +45,8 @@ return {
                 filetypes = { "julia" },
                 root_markers = { "Project.toml" }
             })
-            vim.lsp.enable("jetls")
 
-            vim.lsp.config('pyright', {
-                capabilities = capabilities,
-            })
-            vim.lsp.enable('pyright')
-
-            vim.lsp.enable('tinymist')
-
-            vim.lsp.enable('harper_ls')
+            vim.lsp.enable({ "lua_ls", "pyright", "tinymist", "harper_ls", "jetls" })
 
             -- Set up nvim-cmp
             cmp.setup({
