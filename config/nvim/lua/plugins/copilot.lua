@@ -1,13 +1,8 @@
 return {
   {
     'github/copilot.vim',
-    config = function()
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "tex",
-        callback = function()
-          vim.cmd("Copilot disable")
-        end,
-      })
+    init = function()
+      vim.g.copilot_filetypes = { tex = false }
     end,
   },
 }
