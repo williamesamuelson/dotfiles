@@ -1,2 +1,3 @@
 theme = Rose Pine
 macos-titlebar-style = hidden
+macos-option-as-alt = left
