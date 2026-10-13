@@ -1,3 +1,6 @@
 theme = Rose Pine
 macos-titlebar-style = hidden
 macos-option-as-alt = left
+# pass option+left/right through to tmux (prefix + M-arrow resizes panes)
+keybind = alt+arrow_left=unbind
+keybind = alt+arrow_right=unbind
