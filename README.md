@@ -23,6 +23,8 @@ The repository is organized as follows:
 │   │   └── lua/
 │   ├── wezterm/            # WezTerm configuration
 │   │   └── wezterm.lua
+│   ├── ghostty/            # Ghostty configuration
+│   │   └── config.ghostty
 └── setup.sh                # Script to set up symlinks
 ```
 
@@ -52,6 +54,7 @@ ls -l ~/.tmux.conf
 ls -l ~/.zshrc
 ls -l ~/.config/nvim
 ls -l ~/.config/wezterm
+ls -l ~/.config/ghostty
 ```
 
 ### Adding New Configurations

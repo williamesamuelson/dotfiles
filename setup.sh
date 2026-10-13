@@ -28,6 +28,7 @@ declare -a SYMLINKS=(
   "$DOTFILES_DIR/zsh/zprofile:$HOME/.zprofile"
   "$DOTFILES_DIR/nvim:$HOME/.config/nvim"
   "$DOTFILES_DIR/wezterm:$HOME/.config/wezterm"
+  "$DOTFILES_DIR/ghostty:$HOME/.config/ghostty"
 )
 
 # Iterate over the symlinks and create them
