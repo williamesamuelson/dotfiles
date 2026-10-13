@@ -9,6 +9,7 @@ autoload -U compinit; compinit
 # remove duplicates from path
 typeset -U path
 
+# >>> juliaup initialize >>>
 # !! Contents within this block are managed by juliaup !!
 path=("$HOME/.juliaup/bin" $path)
 # <<< juliaup initialize <<<
